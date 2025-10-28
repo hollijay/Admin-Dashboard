@@ -14,29 +14,63 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-container{
     display: grid;
-    /* border: black 5px solid; */
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: minmax(250px, 300px) 1fr;;
     grid-template-rows: auto 1fr;
 }
 
 .sidebar{
     display: grid;
-    background-color: #61bbd8;
+    background-color: #1992D4;
     grid-column: 1 / 2;
-    border: red 5px solid; 
     grid-row: 1 / -1; /* Span all rows */
-    gap: 40px;
+    gap: 30px;
     align-content: start;
 }
 
-.sidebar-options{
+.sidebar-options, .sidebar-header{
     display: grid;
-    grid-template-columns: 1fr auto;
-    grid-auto-rows: auto;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    /* padding-left: 15px; */
+}
+
+.sidebar-header{
+    padding-top: 20px;
+    padding-left: 20px;
+    gap: 15px;
+}
+
+.brand{
+    color: white;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.sidebar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .sidebar-text{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
     color: white;
 }
@@ -50,8 +84,8 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 10px;
     padding: 20px;
-    border: orange 5px solid;
     grid-column: 2 / 3;
+    box-shadow: 0px 7px 12px -3px #000000;
 }
 
 .search-container, .profile-info{
@@ -71,12 +105,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     font-size: 25px;
 }
+
 .profile-info-small, .button-container{
     display:grid;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: start;
     grid-template-columns: auto auto auto;
+    width: 300px;
     white-space: nowrap;
     
 }
@@ -88,9 +124,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .media-button{
     color: white;
-    background: #61bbd8;
+    background: #1992D4;
     border-radius: 20px;
-    border: #61bbd8 1px solid;
+    border: #1992D4 1px solid;
     padding: 10px;
     width: 100px;
     padding-left: 15px;
@@ -100,15 +136,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .searchbar{ 
-    background-color: lightgray;
+    background-color: #e2e8f0;
     border-radius: 20px;
-    border: lightgray 1px solid;
+    border:#e2e8f0 1px solid;
     padding: 5px;
     width:85%;
 }
 
 .content-container{
-    border: pink 5px solid;
+    background-color: #e2e8f0;
     display: grid; 
     grid-template-columns: auto 1fr;
     padding: 20px;
@@ -123,7 +159,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .projects-section {
-    border: black 10px solid;
     display: grid;
     gap: 10px;
 }
@@ -138,6 +173,7 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     gap: 10px;
 }
+
 .info-container{
     display: grid;
     border: red 5px solid;

@@ -14,8 +14,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-container{
     display: grid;
-    grid-template-columns: minmax(250px, 300px) 1fr;;
+    grid-template-columns: minmax(250px, 280px) 1fr;;
     grid-template-rows: auto 1fr;
+    min-height: 100vh;
 }
 
 .sidebar{
@@ -132,7 +133,6 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 15px;
     font-size: 15px;
     font-weight: 600 ;
-    
 }
 
 .searchbar{ 
@@ -146,31 +146,38 @@ h1, h2, h3, h4, h5, h6 {
 .content-container{
     background-color: #e2e8f0;
     display: grid; 
-    grid-template-columns: auto 1fr;
+    border: blue solid 10px;
+    grid-template-columns: 6fr 2.5fr;
+    /* justify-content: center; */
     padding: 20px;
+}
+
+.projects-section {
+    /* width: fit-content; */
+    display: grid;
+    border: black 10px solid;
+    grid-template-rows: auto 1fr;
     gap: 10px;
 }
 
 .projects-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(100px, 500px));
+    justify-content: start;
     border: yellow 10px solid;
     gap: 10px;
 }
 
-.projects-section {
-    display: grid;
-    gap: 10px;
-}
-
 .content-card{
-    height: 200px;
+    height: 180px;
     border: pink 5px solid;
     text-align: center;
 }
 
 .updates-container{
     display: grid;
+    grid-template-columns: 1fr;
+    border: purple 10px solid;
     gap: 10px;
 }
 
